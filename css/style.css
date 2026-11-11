@@ -898,27 +898,6 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1.75rem;
 }
 
-@media (max-width: 1200px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-  }
-}
-
-@media (max-width: 560px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-}
-
 .product-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
@@ -1227,18 +1206,6 @@ h1, h2, h3, h4, h5, h6 {
 .features-grid.variety-grid {
   grid-template-columns: repeat(3, 1fr);
   margin-top: 2rem;
-}
-
-@media (max-width: 900px) {
-  .features-grid.variety-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .features-grid.variety-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .feature-box {
@@ -1959,14 +1926,64 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN BREAKPOINTS
+   RESPONSIVE DESIGN SYSTEM
+   Standard Breakpoints:
+   - Desktop:  > 1024px
+   - Laptop:   1025px – 1200px (fine-tune)
+   - Tablet:   768px – 1024px (strictly 2 columns for card grids, 1 col hero)
+   - Mobile:   < 768px (strictly 1 column for card grids & hero)
+   - Extra Small Mobile: < 480px (optimized tap targets & typography)
    ========================================================================== */
 
-@media (max-width: 1024px) {
+/* Global Overflow Prevention */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  position: relative;
+}
+
+*, *::before, *::after {
+  max-width: 100%;
+}
+
+.product-card,
+.feature-box,
+.credential-card,
+.contact-card-box,
+.custom-order-form-panel {
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   1. LAPTOP / SMALL DESKTOP (1025px - 1200px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLET SCREENS (768px – 1024px)
+   Requirement: All multi-column card grids stack neatly into 2 columns.
+   Hero & 2-column major layouts stack into 1 column.
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  /* Hero Section: 1 Column */
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 3rem;
+    gap: 2.75rem;
+  }
+
+  .hero-content {
+    max-width: 640px;
+    margin: 0 auto;
   }
 
   .hero-description {
@@ -1979,14 +1996,32 @@ textarea.form-control {
 
   .hero-stats {
     justify-content: center;
+    gap: 2.5rem;
   }
 
-  .categories-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .hero-visual {
+    max-width: 440px;
+    margin: 0 auto;
   }
 
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero-floating-pill.pill-top {
+    left: 0;
+  }
+
+  .hero-floating-pill.pill-bottom {
+    right: 0;
+  }
+
+  /* Home Restaurant Intro: 1 Column */
+  .home-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .home-intro-visual {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .about-intro-grid {
@@ -1994,17 +2029,61 @@ textarea.form-control {
     gap: 2.5rem;
   }
 
-  .contact-layout-grid {
-    grid-template-columns: 1fr;
+  .about-image-collage {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* All Multi-Column Grids Stack into 2 Columns */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem;
+  }
+
+  .features-grid.variety-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem;
+  }
+
+  .credentials-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem;
   }
 
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
+
+  /* Contact Page Layout: 1 Column */
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }
 
-@media (max-width: 768px) {
+/* --------------------------------------------------------------------------
+   3. MOBILE SCREENS (< 768px)
+   Requirement: All multi-column card grids stack neatly into 1 column.
+   Zero horizontal overflow. Clean touch targets & readability.
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 1.15rem;
+  }
+
+  /* Header & Mobile Drawer Navigation */
   .mobile-nav-toggle {
     display: flex;
   }
@@ -2013,20 +2092,26 @@ textarea.form-control {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: min(300px, 85vw);
     height: 100vh;
     background: #0B0F19;
     flex-direction: column;
     align-items: flex-start;
-    padding: 5rem 2rem 2rem;
-    gap: 1.5rem;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+    padding: 5.5rem 1.75rem 2rem;
+    gap: 1.25rem;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.85);
     transition: right var(--transition-normal);
     z-index: 1000;
+    overflow-y: auto;
   }
 
   .nav-menu.active {
     right: 0;
+  }
+
+  .brand-logo img {
+    width: 175px;
+    height: auto;
   }
 
   .header-actions .header-wa-btn span {
@@ -2035,42 +2120,145 @@ textarea.form-control {
 
   .header-actions .header-wa-btn {
     padding: 0.55rem 0.75rem;
+    border-radius: var(--radius-full);
+  }
+
+  /* Hero Section: 1 Column & Fluid Typography */
+  .hero-section {
+    padding: 3.5rem 0 4rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 7.5vw, 2.5rem);
+    line-height: 1.15;
   }
 
-  .section-title {
-    font-size: 1.9rem;
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto 1.75rem;
   }
 
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero-actions {
+    justify-content: center;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-stats {
+    justify-content: space-around;
     gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1.25rem;
+  }
+
+  .stat-value {
+    font-size: 1.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* Prevent decorative floating emojis from creating overflow */
+  .floating-ingredient {
+    display: none;
+  }
+
+  .hero-floating-pill.pill-top {
+    left: 0;
+    top: 5%;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .hero-floating-pill.pill-bottom {
+    right: 0;
+    bottom: 5%;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  /* Section Titles & Subtitles */
+  .section-title {
+    font-size: clamp(1.65rem, 6vw, 2rem);
+    line-height: 1.25;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Home Restaurant Intro: 1 Column */
+  .home-intro-section {
+    padding: 3.5rem 0;
+  }
+
+  .home-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .home-intro-visual {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .home-intro-badge {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: -15px auto 0;
+    width: fit-content;
+    box-shadow: var(--shadow-md);
+  }
+
+  .home-intro-content h2 {
+    font-size: 1.85rem;
+  }
+
+  .home-intro-highlights {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  /* ALL MULTI-COLUMN CARDS STACK TO 1 COLUMN ON MOBILE */
+  .product-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+  }
+
+  .features-grid.variety-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
   }
 
   .credentials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form-grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.1rem;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
   }
 
   .categories-grid {
@@ -2078,32 +2266,187 @@ textarea.form-control {
     gap: 0.75rem;
   }
 
-  .category-showcase-card {
-    aspect-ratio: 1 / 1.15;
-  }
-
-  .category-showcase-card .card-title {
-    font-size: 1rem;
-  }
-
-  .product-grid {
+  .about-intro-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .features-grid {
+  .contact-layout-grid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Explore Menu Banner */
+  .explore-menu-cta-section {
+    padding: 3.5rem 0;
+  }
+
+  .explore-menu-banner-card {
+    padding: 3rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .explore-menu-title {
+    font-size: clamp(1.6rem, 5.5vw, 2.1rem);
+  }
+
+  .explore-menu-text {
+    font-size: 0.98rem;
+    margin-bottom: 1.75rem;
+  }
+
+  /* Why Choose Us & Feature Cards */
+  .why-choose-section {
+    padding: 3.5rem 0;
+  }
+
+  .feature-box {
+    padding: 1.5rem 1.25rem;
+  }
+
+  /* Call To Action Banner */
+  .cta-section {
+    padding: 3.5rem 0;
   }
 
   .cta-card {
-    padding: 2.5rem 1.25rem;
+    padding: 2.25rem 1.25rem;
+    border-radius: var(--radius-lg);
   }
 
   .cta-title {
-    font-size: 1.85rem;
+    font-size: clamp(1.6rem, 5.5vw, 2rem);
   }
 
+  .cta-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Menu Page Toolbar & Search */
+  .page-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .search-box-wrapper {
+    max-width: 100%;
+  }
+
+  .category-filters-container {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .category-pill {
+    padding: 0.55rem 0.95rem;
+    font-size: 0.85rem;
+  }
+
+  .featured-menu-section {
+    padding: 2.5rem 0 4rem;
+  }
+
+  /* Contact Page Panel */
   .custom-order-form-panel {
-    padding: 1.5rem;
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .form-header h2 {
+    font-size: 1.65rem;
+  }
+
+  /* Footer: 1 Column */
+  .site-footer {
+    padding: 3.5rem 0 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .footer-reg-details {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. EXTRA SMALL MOBILE SCREENS (< 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-explore-menu {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-showcase-card {
+    aspect-ratio: 16 / 9;
+  }
+
+  .product-body {
+    padding: 1.15rem;
+  }
+
+  .product-title {
+    font-size: 1.05rem;
+  }
+
+  .product-unit-price {
+    font-size: 1.2rem;
+  }
+
+  .product-actions-bar {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .floating-wa-btn {
+    bottom: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .floating-wa-btn svg {
+    width: 26px;
+    height: 26px;
   }
 }
 
