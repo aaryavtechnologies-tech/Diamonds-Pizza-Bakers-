@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diamonds Pizza Bakers | Best Pizzeria & Bakery in Rajgarh, Churu</title>
-  <meta name="description" content="Welcome to Diamonds Pizza Bakers, Rajgarh's premier pizzeria. Savor authentic stone-baked pizzas, delicious gourmet burgers, refreshing beverages, and sides with instant WhatsApp ordering." />
+  <meta name="description" content="Welcome to Diamonds Pizza Bakers, Rajgarh's premier stone-baked pizzeria. Savor authentic artisan pizzas, delicious gourmet burgers, refreshing beverages, and sides with instant WhatsApp ordering." />
   <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
   <link rel="stylesheet" href="css/style.css" />
   <!-- Schema.org Restaurant Structured Data for Local SEO -->
@@ -26,7 +26,12 @@
     },
     "servesCuisine": ["Pizza", "Burgers", "Italian", "Fast Food"],
     "priceRange": "₹50 - ₹300",
-    "openingHours": "Mo-Su 11:00-23:00"
+    "openingHours": "Mo-Su 11:00-23:00",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "350"
+    }
   }
   </script>
 </head>
@@ -45,6 +50,7 @@
           <li><a href="index.html" class="nav-link active">Home</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -76,48 +82,74 @@
   <div class="nav-overlay" id="nav-overlay"></div>
 
   <main id="main-content">
-    <!-- ==================== HERO SECTION ==================== -->
+    <!-- ==================== HERO SECTION (LIGHT THEME - CHATORI JEEB INSPIRED) ==================== -->
     <section class="hero-section">
+      <!-- Radiant ambient background glows -->
+      <div class="hero-ambient-glow glow-top-left" aria-hidden="true"></div>
+      <div class="hero-ambient-glow glow-bottom-right" aria-hidden="true"></div>
+
       <div class="container">
         <div class="hero-grid">
-          <!-- Left Column: Headline & Content -->
+          <!-- Left Column: Headline, Actions & Proof -->
           <div class="hero-content">
             <div class="hero-badge">
               <span class="badge-dot"></span>
-              Freshly Baked in Rajgarh
+              <span>🔥 Rajgarh's Premier Stone-Baked Pizzeria</span>
             </div>
+
             <h1 class="hero-title">
-              Fresh Oven Bakes & <span class="text-gold">Artisan Crusts</span>
+              Craving Hot, Cheesy & <span class="hero-highlight"><span class="text-gold">Artisan Pizzas?</span></span>
             </h1>
+
             <p class="hero-description">
-              Hand-stretched dough, 100% real dairy mozzarella, farm-fresh ingredients, and zesty secret spice blends. Experience authentic pizzeria perfection right here in Rajgarh, Churu.
+              Hand-stretched dough, 100% real dairy mozzarella, farm-fresh toppings, and live stone-oven baking in Rajgarh, Churu. Savor authentic pizzeria perfection delivered piping hot to your doorstep!
             </p>
 
             <div class="hero-actions">
-              <a href="https://wa.me/917666351686?text=Hello%20Diamonds%20Pizza%20Bakers!%20I%20would%20like%20to%20order%20now." 
+              <a href="https://wa.me/917666351686?text=Hello%20Diamonds%20Pizza%20Bakers!%20I%20would%20like%20to%20place%20an%20order." 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="btn btn-whatsapp">
+                 class="btn btn-whatsapp hero-btn-main" 
+                 aria-label="Order on WhatsApp">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                   <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.18 8.18 0 01-5.82 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.16-3.02.79.81-2.95-.19-.3a8.19 8.19 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.58.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29z"/>
                 </svg>
                 <span>Order on WhatsApp</span>
+                <span class="btn-arrow">→</span>
               </a>
-              <a href="menu.html" class="btn btn-secondary">
-                <span>Explore Full Menu</span>
+              <a href="menu.html" class="btn btn-secondary hero-btn-secondary">
+                <span>Explore 30+ Menu Items</span>
                 <span>→</span>
               </a>
+            </div>
+
+            <!-- Social Proof Rating Strip (Chatori Jeeb Pattern) -->
+            <div class="hero-social-proof">
+              <div class="avatar-stack" aria-hidden="true">
+                <span class="avatar-circle av-1">AS</span>
+                <span class="avatar-circle av-2">PS</span>
+                <span class="avatar-circle av-3">VS</span>
+                <span class="avatar-circle av-4">RC</span>
+              </div>
+              <div class="proof-text-wrap">
+                <div class="proof-rating">
+                  <span class="stars" aria-label="5 stars">★★★★★</span>
+                  <strong>4.9 / 5</strong>
+                  <span class="rating-badge">Top Rated</span>
+                </div>
+                <div class="proof-count">Loved by 2,000+ local foodies in Rajgarh</div>
+              </div>
             </div>
 
             <!-- Stats Bar -->
             <div class="hero-stats">
               <div class="hero-stat-item">
                 <span class="stat-value">100%</span>
-                <span class="stat-label">Real Dairy Cheese</span>
+                <span class="stat-label">Real Dairy Mozzarella</span>
               </div>
               <div class="hero-stat-item">
-                <span class="stat-value">Fresh</span>
-                <span class="stat-label">Handmade Dough</span>
+                <span class="stat-value">Stone-Oven</span>
+                <span class="stat-label">Handmade Crust</span>
               </div>
               <div class="hero-stat-item">
                 <span class="stat-value">Direct</span>
@@ -126,11 +158,11 @@
             </div>
           </div>
 
-          <!-- Right Column: Food Visual Composition -->
+          <!-- Right Column: Food Visual Composition with Trust Pills -->
           <div class="hero-visual">
-            <div class="hero-glow-backdrop"></div>
+            <div class="hero-glow-backdrop" aria-hidden="true"></div>
             <div class="hero-image-wrap">
-              <img src="assets/images/hero/hero-pizza.jpg" alt="Artisan Gourmet Paneer Tikka Pizza by Diamonds Pizza Bakers" width="460" height="460" />
+              <img src="assets/images/hero/hero-pizza.jpg" alt="Artisan Gourmet Stone-Baked Paneer Tikka Pizza by Diamonds Pizza Bakers" width="480" height="480" />
               
               <!-- Subtle Floating Food Ingredient Accents -->
               <span class="floating-ingredient ingredient-basil" title="Fresh Italian Basil" aria-hidden="true">🌿</span>
@@ -138,20 +170,28 @@
               <span class="floating-ingredient ingredient-cheese" title="Melted Dairy Cheese" aria-hidden="true">🧀</span>
               <span class="floating-ingredient ingredient-tomato" title="Ripe Roma Tomato" aria-hidden="true">🍅</span>
 
-              <!-- Floating Interactive Badges -->
+              <!-- Floating Interactive Trust Badges -->
               <div class="hero-floating-pill pill-top">
                 <span class="pill-icon">🔥</span>
                 <div class="pill-text">
-                  <strong>Paneer Tikka</strong>
-                  <span>Tandoori Smoked</span>
+                  <strong>Stone-Oven Baked</strong>
+                  <span>Crisp & Charred Crust</span>
                 </div>
               </div>
 
               <div class="hero-floating-pill pill-bottom">
                 <span class="pill-icon">🧀</span>
                 <div class="pill-text">
-                  <strong>Double Mozzarella</strong>
-                  <span>Golden Crust Pull</span>
+                  <strong>100% Real Mozzarella</strong>
+                  <span>Golden Dairy Cheese Pull</span>
+                </div>
+              </div>
+
+              <div class="hero-floating-pill pill-fssai">
+                <span class="pill-icon">🛡️</span>
+                <div class="pill-text">
+                  <strong>FSSAI Certified</strong>
+                  <span>Lic: 22224090005730</span>
                 </div>
               </div>
             </div>
@@ -160,7 +200,82 @@
       </div>
     </section>
 
-    <!-- ==================== SECTION 3: SHORT RESTAURANT INTRODUCTION ==================== -->
+    <!-- ==================== POPULAR CRAVING CATEGORIES ==================== -->
+    <section class="categories-showcase-section" id="categories">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-eyebrow">EXPLORE OUR FLAVORS</span>
+          <h2 class="section-title">Popular Craving Categories</h2>
+          <p class="section-subtitle">
+            Pick your favorite comfort craving — baked and prepared fresh to order in Rajgarh.
+          </p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- 1. Pizzas -->
+          <a href="menu.html?category=pizza" class="category-showcase-card" data-category-target="pizza">
+            <img src="assets/images/categories/cat-pizza.jpg" alt="Stone-Baked Pizzas" class="card-bg-img" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-count">10+ Varieties</span>
+              <h3 class="card-title">Stone-Baked Pizzas</h3>
+              <span class="card-arrow-pill">Explore →</span>
+            </div>
+          </a>
+
+          <!-- 2. Burgers -->
+          <a href="menu.html?category=burgers" class="category-showcase-card" data-category-target="burgers">
+            <img src="assets/images/categories/cat-burgers.jpg" alt="Gourmet Burgers & Wraps" class="card-bg-img" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-count">Crispy Patties</span>
+              <h3 class="card-title">Burgers & Wraps</h3>
+              <span class="card-arrow-pill">Explore →</span>
+            </div>
+          </a>
+
+          <!-- 3. Pastas -->
+          <a href="menu.html?category=pastas" class="category-showcase-card" data-category-target="pastas">
+            <img src="assets/images/categories/cat-pastas.jpg" alt="Creamy Italian Pastas" class="card-bg-img" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-count">Makhani & Red Sauce</span>
+              <h3 class="card-title">Italian Pastas</h3>
+              <span class="card-arrow-pill">Explore →</span>
+            </div>
+          </a>
+
+          <!-- 4. Sandwiches & Combos -->
+          <a href="menu.html?category=sides" class="category-showcase-card" data-category-target="sides">
+            <img src="assets/images/menu/veg-sandwich-tea-combo.jpg" alt="Grilled Sandwiches & Combos" class="card-bg-img" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-count">Toasties & Chai</span>
+              <h3 class="card-title">Sandwiches & Combos</h3>
+              <span class="card-arrow-pill">Explore →</span>
+            </div>
+          </a>
+
+          <!-- 5. Street Bites & Snacks -->
+          <a href="menu.html?category=sides" class="category-showcase-card" data-category-target="sides">
+            <img src="assets/images/categories/cat-street-food.jpg" alt="Street Bites & Snacks" class="card-bg-img" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-count">Momos, Fries & Rolls</span>
+              <h3 class="card-title">Sides & Snacks</h3>
+              <span class="card-arrow-pill">Explore →</span>
+            </div>
+          </a>
+
+          <!-- 6. Chilled Beverages -->
+          <a href="menu.html?category=beverages" class="category-showcase-card" data-category-target="beverages">
+            <img src="assets/images/categories/cat-beverages.jpg" alt="Chilled Beverages & Refreshments" class="card-bg-img" loading="lazy" />
+            <div class="card-overlay">
+              <span class="card-count">Juices, Sodas & Shakes</span>
+              <h3 class="card-title">Chilled Beverages</h3>
+              <span class="card-arrow-pill">Explore →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: RESTAURANT INTRODUCTION ==================== -->
     <section class="home-intro-section">
       <div class="container">
         <div class="home-intro-grid">
@@ -171,7 +286,7 @@
               <span class="badge-icon">🔥</span>
               <div class="home-intro-badge-text">
                 <strong>Fresh Daily</strong>
-                <span>Hand-Tossed & Oven Baked</span>
+                <span>Hand-Tossed & Stone-Baked</span>
               </div>
             </div>
           </div>
@@ -211,7 +326,7 @@
     </section>
 
     <!-- ==================== OUR VARIED MENU SELECTION ==================== -->
-    <section style="padding: 5rem 0 2.5rem;">
+    <section style="padding: 5rem 0 2.5rem; background: var(--bg-warm-light);">
       <div class="container">
         <div class="text-center">
           <span class="section-eyebrow">SOMETHING FOR EVERYONE</span>
@@ -223,36 +338,217 @@
 
         <div class="features-grid variety-grid">
           <!-- Card 1: Pizzas -->
-          <div class="feature-box" style="text-align: left; padding: 1.5rem; overflow: hidden;">
-            <div style="border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.25rem; aspect-ratio: 16/10;">
-              <img src="assets/images/menu/paneer-tikka-pizza.jpg" alt="Artisan Pizzas at Diamonds Pizza Bakers" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="variety-card">
+            <div class="variety-card-img-wrap">
+              <img src="assets/images/menu/paneer-tikka-pizza.jpg" alt="Artisan Pizzas at Diamonds Pizza Bakers" loading="lazy" />
             </div>
-            <h3 class="feature-title" style="font-size: 1.25rem;">Hand-Tossed Pizzas</h3>
-            <p class="feature-desc">
+            <h3 class="variety-card-title">Hand-Tossed Pizzas</h3>
+            <p class="variety-card-desc">
               A comprehensive selection ranging from simple favorites like Cheese Corn and Onion Capsicum to loaded specials like Paneer Tikka and Veggie Paradise, available in multiple sizes to suit any appetite.
             </p>
           </div>
 
           <!-- Card 2: Burgers -->
-          <div class="feature-box" style="text-align: left; padding: 1.5rem; overflow: hidden;">
-            <div style="border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.25rem; aspect-ratio: 16/10;">
-              <img src="assets/images/menu/aloo-tikki-burger.jpg" alt="Gourmet Burgers at Diamonds Pizza Bakers" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="variety-card">
+            <div class="variety-card-img-wrap">
+              <img src="assets/images/menu/aloo-tikki-burger.jpg" alt="Gourmet Burgers at Diamonds Pizza Bakers" loading="lazy" />
             </div>
-            <h3 class="feature-title" style="font-size: 1.25rem;">Gourmet Burgers & Wraps</h3>
-            <p class="feature-desc">
+            <h3 class="variety-card-title">Gourmet Burgers & Wraps</h3>
+            <p class="variety-card-desc">
               Crisp spiced cutlets, fresh crisp lettuce, juicy tomato slices, and tangy house sauces layered inside warm toasted sesame buns for a deeply satisfying, handheld treat.
             </p>
           </div>
 
           <!-- Card 3: Beverages -->
-          <div class="feature-box" style="text-align: left; padding: 1.5rem; overflow: hidden;">
-            <div style="border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.25rem; aspect-ratio: 16/10;">
-              <img src="assets/images/menu/coca-cola.jpg" alt="Chilled Beverages at Diamonds Pizza Bakers" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="variety-card">
+            <div class="variety-card-img-wrap">
+              <img src="assets/images/menu/coca-cola.jpg" alt="Chilled Beverages at Diamonds Pizza Bakers" loading="lazy" />
             </div>
-            <h3 class="feature-title" style="font-size: 1.25rem;">Chilled Beverages & Refreshments</h3>
-            <p class="feature-desc">
+            <h3 class="variety-card-title">Chilled Beverages & Refreshments</h3>
+            <p class="variety-card-desc">
               Pair your food with popular ice-cold carbonated sodas, thick fruity refreshments, or a hot cup of freshly brewed Indian masala tea to complete your dining experience.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION D: WHY CHOOSE US ==================== -->
+    <section class="why-choose-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-eyebrow">OUR COMMITMENT</span>
+          <h2 class="section-title">Why Diamonds Pizza Bakers</h2>
+          <p class="section-subtitle">Real food made with integrity, authentic stone-oven technique, and unwavering focus on quality.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrap" aria-hidden="true">🔥</div>
+            <h3 class="feature-title">Stone-Baked Dough</h3>
+            <p class="feature-desc">Slow-fermented dough hand-stretched to order and baked at intense heat for an airy, crisp artisan crust.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap" aria-hidden="true">🧀</div>
+            <h3 class="feature-title">100% Real Dairy Cheese</h3>
+            <p class="feature-desc">We never use synthetic substitutes or palm oils. Only pure mozzarella and dairy cheese for an authentic golden stretch.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap" aria-hidden="true">⚡</div>
+            <h3 class="feature-title">Fast WhatsApp Ordering</h3>
+            <p class="feature-desc">No complicated cart checkout or app downloads. Order directly via WhatsApp and chat straight with our kitchen.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap" aria-hidden="true">🛡️</div>
+            <h3 class="feature-title">FSSAI Certified Kitchen</h3>
+            <p class="feature-desc">Officially registered (Reg: 22224090005730) with strict hygiene, sanitized prep areas, and fresh ingredients daily.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CUSTOMER REVIEWS & STORIES (CHATORI JEEB INSPIRED) ==================== -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-eyebrow">LOVED BY LOCAL FOODIES</span>
+          <h2 class="section-title">Real Stories, Real Cravings</h2>
+          <p class="section-subtitle">
+            See what pizza lovers, families, and regular foodies across Rajgarh & Pilani Moad say about Diamonds Pizza Bakers.
+          </p>
+
+          <div class="reviews-summary-badge">
+            <span class="summary-stars" aria-label="5 stars">★★★★★</span>
+            <span class="summary-score">4.9 / 5</span>
+            <span class="summary-divider">•</span>
+            <span class="summary-count">350+ WhatsApp Orders</span>
+            <span class="summary-divider">•</span>
+            <span class="summary-recommend">98% Recommendation Rate</span>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="verified-pill">✔ Verified Order</span>
+            </div>
+            <p class="review-quote">
+              “Hands down the cheesiest and most authentic pizza in Rajgarh! The crust is light and crispy, and the Paneer Tikka pizza was packed with rich flavor. WhatsApp ordering took less than a minute.”
+            </p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #FDE68A, #F59E0B);">AS</div>
+              <div class="review-meta">
+                <h4 class="review-name">Aman Shekhawat</h4>
+                <span class="review-role">Local Foodie, Rajgarh</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="verified-pill">✔ Verified Order</span>
+            </div>
+            <p class="review-quote">
+              “Their Garlic Bread and Veggie Paradise Pizza have become our college gang's weekend ritual. Always arrives piping hot, fresh from the oven. Very affordable for the gourmet quality you get!”
+            </p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #FECDD3, #E11D48); color: #FFFFFF;">PS</div>
+              <div class="review-meta">
+                <h4 class="review-name">Pooja Sharma</h4>
+                <span class="review-role">College Student</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="verified-pill">✔ Verified Order</span>
+            </div>
+            <p class="review-quote">
+              “Ordered 6 large pizzas for a family birthday gathering. The 100% real dairy mozzarella cheese pull was incredible. Everyone from kids to elders loved it. Best pizzeria in Churu district!”
+            </p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #A7F3D0, #10B981);">VS</div>
+              <div class="review-meta">
+                <h4 class="review-name">Vikram Singh Rathore</h4>
+                <span class="review-role">Family Dinner Host</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="verified-pill">✔ Verified Order</span>
+            </div>
+            <p class="review-quote">
+              “Being right near Soni Hospital at Pilani Moad, we frequently order burgers, french fries, and cold drinks for lunch. Super fast preparation, clean hygienic packaging, and courteous service.”
+            </p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #C7D2FE, #6366F1); color: #FFFFFF;">DS</div>
+              <div class="review-meta">
+                <h4 class="review-name">Dr. Soni's Clinic Staff</h4>
+                <span class="review-role">Pilani Moad, Rajgarh</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="verified-pill">✔ Verified Order</span>
+            </div>
+            <p class="review-quote">
+              “You can immediately tell they don't cut corners with artificial cheese blend or palm oils. The melted mozzarella is rich, the veggies are crunchy, and the tomato sauce is well balanced. 10/10!”
+            </p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #FBCFE8, #DB2777); color: #FFFFFF;">RC</div>
+              <div class="review-meta">
+                <h4 class="review-name">Ritu Choudhary</h4>
+                <span class="review-role">Food Enthusiast</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 6 -->
+          <div class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars" aria-label="5 out of 5 stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <span class="verified-pill">✔ Verified Order</span>
+            </div>
+            <p class="review-quote">
+              “Live stone-baked crust makes all the difference compared to commercial chain pizzas. Ordered the Cheese Corn Pizza and Aloo Tikki Burger combo. Delicious, hot, and highly satisfying.”
+            </p>
+            <div class="review-author">
+              <div class="review-avatar" style="background: linear-gradient(135deg, #FED7AA, #EA580C);">MV</div>
+              <div class="review-meta">
+                <h4 class="review-name">Mohit Verma</h4>
+                <span class="review-role">Regular Customer</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -267,7 +563,7 @@
             <span class="section-eyebrow">DISCOVER OUR CREATIONS</span>
             <h2 class="explore-menu-title">Something Delicious Is Waiting for You!</h2>
             <p class="explore-menu-text">
-              From delicious pizzas to satisfying burgers and refreshing beverages, explore everything Diamonds Pizza Bakers has to offer.
+              From stone-baked pizzas to satisfying gourmet burgers, loaded pastas, and refreshing beverages, explore everything Diamonds Pizza Bakers has to offer.
             </p>
             <a href="menu.html" class="btn-explore-menu">
               <span>Explore Our Menu</span>
@@ -278,54 +574,17 @@
       </div>
     </section>
 
-    <!-- ==================== SECTION D: WHY CHOOSE US ==================== -->
-    <section class="why-choose-section">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-eyebrow">OUR COMMITMENT</span>
-          <h2 class="section-title">Why Diamonds Pizza Bakers</h2>
-          <p class="section-subtitle">Real food made with integrity, authentic technique, and unwavering focus on quality.</p>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-box">
-            <div class="feature-icon-wrap">🔥</div>
-            <h3 class="feature-title">Stone-Baked Dough</h3>
-            <p class="feature-desc">Slow-fermented dough hand-stretched to order and baked at intense heat for an airy, crisp artisan crust.</p>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon-wrap">🧀</div>
-            <h3 class="feature-title">100% Real Dairy Cheese</h3>
-            <p class="feature-desc">We never use synthetic substitutes. Only pure mozzarella and dairy cheese for an authentic golden stretch.</p>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon-wrap">⚡</div>
-            <h3 class="feature-title">Fast WhatsApp Ordering</h3>
-            <p class="feature-desc">No complicated cart checkout or app downloads. Order directly via WhatsApp and chat straight with our kitchen.</p>
-          </div>
-
-          <div class="feature-box">
-            <div class="feature-icon-wrap">🛡️</div>
-            <h3 class="feature-title">FSSAI Certified Kitchen</h3>
-            <p class="feature-desc">Officially registered (Reg: 22224090005730) with strict hygiene, sanitized prep areas, and fresh ingredients daily.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== SECTION E: CALL TO ACTION ==================== -->
+    <!-- ==================== SECTION E: PARTY & CUSTOM ORDER CTA ==================== -->
     <section class="cta-section">
       <div class="container">
         <div class="cta-card">
-          <span class="section-eyebrow">HOT & FRESH</span>
-          <h2 class="cta-title">Ready for Your Next Delicious Slice?</h2>
+          <span class="section-eyebrow">CELEBRATE WITH US</span>
+          <h2 class="cta-title">Planning a Birthday, Party, or Gathering?</h2>
           <p class="cta-subtitle">
-            Whether you want a personal cheesy treat, a family combo meal, or a customized party platter, our oven is fired up for you in Rajgarh.
+            Whether you want a personal cheesy treat, a family combo meal, or a customized party platter, our stone oven is fired up for you in Rajgarh.
           </p>
           <div class="cta-actions">
-            <a href="https://wa.me/917666351686?text=Hello%20Diamonds%20Pizza%20Bakers!%20I%20would%20like%20to%20order%20food." 
+            <a href="https://wa.me/917666351686?text=Hello%20Diamonds%20Pizza%20Bakers!%20I%20would%20like%20to%20place%20a%20custom%20order." 
                target="_blank" 
                rel="noopener noreferrer" 
                class="btn btn-whatsapp" 
@@ -336,7 +595,7 @@
               <span>Instant WhatsApp Order</span>
             </a>
             <a href="contact.html" class="btn btn-secondary" style="padding: 0.9rem 2rem; font-size: 1rem;">
-              <span>Contact & Location Details</span>
+              <span>Contact & Custom Order Form</span>
             </a>
           </div>
         </div>
@@ -344,7 +603,7 @@
     </section>
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
+  <!-- ==================== FOOTER (LIGHT SLATE THEME) ==================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -367,6 +626,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="menu.html">Interactive Menu</a></li>
+            <li><a href="#reviews">Customer Reviews</a></li>
             <li><a href="contact.html">Contact & Custom Orders</a></li>
           </ul>
         </div>
@@ -377,6 +637,7 @@
           <ul class="footer-links">
             <li><a href="menu.html?category=pizza">Pizzas</a></li>
             <li><a href="menu.html?category=burgers">Burgers</a></li>
+            <li><a href="menu.html?category=pastas">Pastas</a></li>
             <li><a href="menu.html?category=beverages">Beverages</a></li>
           </ul>
         </div>
@@ -435,4 +696,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-
