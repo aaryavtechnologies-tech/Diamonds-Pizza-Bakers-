@@ -293,11 +293,14 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo img {
-  height: 48px;
+  max-height: 50px;
   width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-menu {
@@ -1801,8 +1804,10 @@ textarea.form-control {
 }
 
 .footer-brand img {
-  height: 48px;
+  max-height: 50px;
   width: auto;
+  object-fit: contain;
+  display: block;
   margin-bottom: 1.25rem;
 }
 
@@ -2110,8 +2115,10 @@ html, body {
   }
 
   .brand-logo img {
-    width: 175px;
-    height: auto;
+    max-height: 38px;
+    width: auto;
+    object-fit: contain;
+    display: block;
   }
 
   .header-actions .header-wa-btn span {
