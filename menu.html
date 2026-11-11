@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu & WhatsApp Ordering | Diamonds Pizza Bakers</title>
+  <meta name="description"
+    content="Browse the full master menu of Diamonds Pizza Bakers. Fresh stone-baked pizzas, gourmet burgers, chilled beverages, pastas, and snacks with live portion size selector and instant WhatsApp ordering." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ==================== STICKY HEADER ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Diamonds Pizza Bakers Home">
+        <img src="assets/logo/logo.svg" alt="Diamonds Pizza Bakers Logo" width="220" height="44" />
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="menu.html" class="nav-link active">Menu</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <a href="https://wa.me/917666351686?text=Hello%20Diamonds%20Pizza%20Bakers!%20I%20would%20like%20to%20place%20an%20order."
+          target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp header-wa-btn"
+          aria-label="Order on WhatsApp">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path
+              d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.18 8.18 0 01-5.82 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.16-3.02.79.81-2.95-.19-.3a8.19 8.19 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.58.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29z" />
+          </svg>
+          <span>Order on WhatsApp</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <main id="main-content">
+    <!-- ==================== MENU PAGE HERO ==================== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-eyebrow">OUR FULL MENU</span>
+        <h1 class="section-title">Explore Our Delicious Menu</h1>
+        <p class="section-subtitle">
+          Browse all 30 freshly prepared food items including stone-baked pizzas, burgers, pastas, sides, and refreshing drinks. Select your portion size, adjust quantity, and order directly on WhatsApp.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="search-box-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="search" id="menu-search-input" class="search-input"
+            placeholder="Search pizza, burger, pasta, toppings..." aria-label="Search menu items" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MENU SECTION WITH DYNAMIC FILTERS ==================== -->
+    <section class="featured-menu-section" style="padding-top: 2.5rem;">
+      <div class="container">
+        <!-- Category Filter Pills -->
+        <div class="menu-toolbar">
+          <div class="category-filters-container" id="category-filters" role="tablist"
+            aria-label="Menu category filters">
+            <!-- Dynamically populated by js/menu.js -->
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="product-grid" id="menu-grid" aria-live="polite">
+          <!-- Dynamically populated by js/menu.js based on window.MENU_ITEMS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <img src="assets/logo/logo.svg" alt="Diamonds Pizza Bakers" width="220" height="44" />
+          <p class="footer-bio">
+            Authentic stone-baked pizzeria serving gourmet handcrafted pizzas, crispy burgers, pastas, street bites, and
+            refreshing beverages in Rajgarh, Rajasthan.
+          </p>
+          <div class="footer-fssai-pill">
+            <span>🛡️</span>
+            <span>FSSAI Lic. No: 22224090005730</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Interactive Menu</a></li>
+            <li><a href="contact.html">Contact & Custom Orders</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Popular Menu Categories -->
+        <div>
+          <h4 class="footer-title">Menu Categories</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html?category=pizza">Pizzas</a></li>
+            <li><a href="menu.html?category=burgers">Burgers</a></li>
+            <li><a href="menu.html?category=beverages">Beverages</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Official Contact Information -->
+        <div>
+          <h4 class="footer-title">Reach Us</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span>📍</span>
+              <span>PILANI MOAD, NEAR SONI HOSPITAL KE PASS, RAJGARH, CHURU, RAJASTHAN – 331023</span>
+            </li>
+            <li>
+              <span>📞</span>
+              <a href="tel:+917666351686">+91-7666351686</a>
+            </li>
+            <li>
+              <span>✉️</span>
+              <a href="mailto:DiamondsPizzaBakers@gmail.com">DiamondsPizzaBakers@gmail.com</a>
+            </li>
+            <li>
+              <span>🕒</span>
+              <span>Mon – Sun: 11:00 AM – 11:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar: Registrations & Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Diamonds Pizza Bakers. All rights reserved.</p>
+        <div class="footer-reg-details">
+          <span>BRN: 8004650013000049</span>
+          <span>UDYAM: UDYAM-RJ-11-0050968</span>
+          <span>FSSAI: 22224090005730</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/917666351686?text=Hello%20Diamonds%20Pizza%20Bakers!%20I%20would%20like%20to%20place%20an%20order."
+    target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Chat and Order on WhatsApp">
+    <div class="pulse-ring"></div>
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+      <path
+        d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.18 8.18 0 01-5.82 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.16-3.02.79.81-2.95-.19-.3a8.19 8.19 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.58.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29z" />
+    </svg>
+  </a>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/menu-data.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

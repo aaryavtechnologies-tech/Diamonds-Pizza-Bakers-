@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamonds Pizza Bakers | Best Pizzeria & Bakery in Rajgarh, Churu</title>
+  <meta name="description" content="Welcome to Diamonds Pizza Bakers, Rajgarh's premier pizzeria. Savor authentic stone-baked pizzas, delicious gourmet burgers, refreshing beverages, and sides with instant WhatsApp ordering." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Schema.org Restaurant Structured Data for Local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Diamonds Pizza Bakers",
+    "image": "assets/images/hero/hero-pizza.jpg",
+    "telephone": "+91-7666351686",
+    "email": "DiamondsPizzaBakers@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Pilani Moad, Near Soni Hospital Ke Pass",
+      "addressLocality": "Rajgarh",
+      "addressRegion": "Rajasthan",
+      "postalCode": "331023",
+      "addressCountry": "IN"
+    },
+    "servesCuisine": ["Pizza", "Burgers", "Italian", "Fast Food"],
+    "priceRange": "₹50 - ₹300",
+    "openingHours": "Mo-Su 11:00-23:00"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==================== STICKY HEADER ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Diamonds Pizza Bakers Home">
+        <img src="assets/logo/logo.svg" alt="Diamonds Pizza Bakers Logo" width="220" height="44" />
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <a href="https://wa.me/917666351686?text=Hello%20Diamonds%20Pizza%20Bakers!%20I%20would%20like%20to%20place%20an%20order." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-whatsapp header-wa-btn" 
+           aria-label="Order on WhatsApp">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.18 8.18 0 01-5.82 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.16-3.02.79.81-2.95-.19-.3a8.19 8.19 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.58.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29z"/>
+          </svg>
+          <span>Order on WhatsApp</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <main id="main-content">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Headline & Content -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              Freshly Baked in Rajgarh
+            </div>
+            <h1 class="hero-title">
+              Fresh Oven Bakes & <span class="text-gold">Artisan Crusts</span>
+            </h1>
+            <p class="hero-description">
+              Hand-stretched dough, 100% real dairy mozzarella, farm-fresh ingredients, and zesty secret spice blends. Experience authentic pizzeria perfection right here in Rajgarh, Churu.
+            </p>
+
+            <div class="hero-actions">
+              <a href="https://wa.me/917666351686?text=Hello%20Diamonds%20Pizza%20Bakers!%20I%20would%20like%20to%20order%20now." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn btn-whatsapp">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.18 8.18 0 01-5.82 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.16-3.02.79.81-2.95-.19-.3a8.19 8.19 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.58.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29z"/>
+                </svg>
+                <span>Order on WhatsApp</span>
+              </a>
+              <a href="menu.html" class="btn btn-secondary">
+                <span>Explore Full Menu</span>
+                <span>→</span>
+              </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero-stats">
+              <div class="hero-stat-item">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Real Dairy Cheese</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="stat-value">Fresh</span>
+                <span class="stat-label">Handmade Dough</span>
+              </div>
+              <div class="hero-stat-item">
+                <span class="stat-value">Direct</span>
+                <span class="stat-label">WhatsApp Orders</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Food Visual Composition -->
+          <div class="hero-visual">
+            <div class="hero-glow-backdrop"></div>
+            <div class="hero-image-wrap">
+              <img src="assets/images/hero/hero-pizza.jpg" alt="Artisan Gourmet Paneer Tikka Pizza by Diamonds Pizza Bakers" width="460" height="460" />
+              
+              <!-- Subtle Floating Food Ingredient Accents -->
+              <span class="floating-ingredient ingredient-basil" title="Fresh Italian Basil" aria-hidden="true">🌿</span>
+              <span class="floating-ingredient ingredient-chilli" title="Spicy Red Chilli" aria-hidden="true">🌶️</span>
+              <span class="floating-ingredient ingredient-cheese" title="Melted Dairy Cheese" aria-hidden="true">🧀</span>
+              <span class="floating-ingredient ingredient-tomato" title="Ripe Roma Tomato" aria-hidden="true">🍅</span>
+
+              <!-- Floating Interactive Badges -->
+              <div class="hero-floating-pill pill-top">
+                <span class="pill-icon">🔥</span>
+                <div class="pill-text">
+                  <strong>Paneer Tikka</strong>
+                  <span>Tandoori Smoked</span>
+                </div>
+              </div>
+
+              <div class="hero-floating-pill pill-bottom">
+                <span class="pill-icon">🧀</span>
+                <div class="pill-text">
+                  <strong>Double Mozzarella</strong>
+                  <span>Golden Crust Pull</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: SHORT RESTAURANT INTRODUCTION ==================== -->
+    <section class="home-intro-section">
+      <div class="container">
+        <div class="home-intro-grid">
+          <!-- Visual presentation -->
+          <div class="home-intro-visual">
+            <img src="assets/images/menu/paneer-tikka-pizza.jpg" alt="Artisan stone-baked pizza at Diamonds Pizza Bakers" class="home-intro-img" loading="lazy" />
+            <div class="home-intro-badge">
+              <span class="badge-icon">🔥</span>
+              <div class="home-intro-badge-text">
+                <strong>Fresh Daily</strong>
+                <span>Hand-Tossed & Oven Baked</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brand Content -->
+          <div class="home-intro-content">
+            <span class="section-eyebrow">WELCOME TO OUR KITCHEN</span>
+            <h2>Authentic Pizzeria & Bakery in Rajgarh</h2>
+            <p>
+              At <strong>Diamonds Pizza Bakers</strong>, we bring the genuine craft of artisanal baking to the heart of Rajgarh, Churu. Every pizza starts with our slow-fermented, hand-stretched dough, layered with rich Italian tomato sauce, 100% pure dairy mozzarella, and vibrant seasonal toppings.
+            </p>
+            <p>
+              Beyond pizzas, our kitchen crafts succulent gourmet burgers, authentic street bites, and refreshing chilled beverages — all prepared fresh upon order with unwavering dedication to flavor, hygiene, and honest hospitality.
+            </p>
+
+            <div class="home-intro-highlights">
+              <div class="intro-highlight-item">
+                <span class="icon">✔</span>
+                <span>100% Real Dairy Mozzarella</span>
+              </div>
+              <div class="intro-highlight-item">
+                <span class="icon">✔</span>
+                <span>Stone-Baked Crusts</span>
+              </div>
+              <div class="intro-highlight-item">
+                <span class="icon">✔</span>
+                <span>Made Fresh to Order</span>
+              </div>
+              <div class="intro-highlight-item">
+                <span class="icon">✔</span>
+                <span>FSSAI Certified Standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4: EXPLORE OUR MENU CTA ==================== -->
+    <section class="explore-menu-cta-section">
+      <div class="container">
+        <div class="explore-menu-banner-card">
+          <img src="assets/images/hero/hero-pizza.jpg" alt="" class="explore-menu-banner-bg" aria-hidden="true" />
+          <div class="explore-menu-banner-content">
+            <span class="section-eyebrow">DISCOVER OUR CREATIONS</span>
+            <h2 class="explore-menu-title">Something Delicious Is Waiting for You!</h2>
+            <p class="explore-menu-text">
+              From delicious pizzas to satisfying burgers and refreshing beverages, explore everything Diamonds Pizza Bakers has to offer.
+            </p>
+            <a href="menu.html" class="btn-explore-menu">
+              <span>Explore Our Menu</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION D: WHY CHOOSE US ==================== -->
+    <section class="why-choose-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-eyebrow">OUR COMMITMENT</span>
+          <h2 class="section-title">Why Diamonds Pizza Bakers</h2>
+          <p class="section-subtitle">Real food made with integrity, authentic technique, and unwavering focus on quality.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrap">🔥</div>
+            <h3 class="feature-title">Stone-Baked Dough</h3>
+            <p class="feature-desc">Slow-fermented dough hand-stretched to order and baked at intense heat for an airy, crisp artisan crust.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap">🧀</div>
+            <h3 class="feature-title">100% Real Dairy Cheese</h3>
+            <p class="feature-desc">We never use synthetic substitutes. Only pure mozzarella and dairy cheese for an authentic golden stretch.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap">⚡</div>
+            <h3 class="feature-title">Fast WhatsApp Ordering</h3>
+            <p class="feature-desc">No complicated cart checkout or app downloads. Order directly via WhatsApp and chat straight with our kitchen.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap">🛡️</div>
+            <h3 class="feature-title">FSSAI Certified Kitchen</h3>
+            <p class="feature-desc">Officially registered (Reg: 22224090005730) with strict hygiene, sanitized prep areas, and fresh ingredients daily.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION E: CALL TO ACTION ==================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <span class="section-eyebrow">HOT & FRESH</span>
+          <h2 class="cta-title">Ready for Your Next Delicious Slice?</h2>
+          <p class="cta-subtitle">
+            Whether you want a personal cheesy treat, a family combo meal, or a customized party platter, our oven is fired up for you in Rajgarh.
+          </p>
+          <div class="cta-actions">
+            <a href="https://wa.me/917666351686?text=Hello%20Diamonds%20Pizza%20Bakers!%20I%20would%20like%20to%20order%20food." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn btn-whatsapp" 
+               style="padding: 0.9rem 2rem; font-size: 1rem;">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.18 8.18 0 01-5.82 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.16-3.02.79.81-2.95-.19-.3a8.19 8.19 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.58.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29z"/>
+              </svg>
+              <span>Instant WhatsApp Order</span>
+            </a>
+            <a href="contact.html" class="btn btn-secondary" style="padding: 0.9rem 2rem; font-size: 1rem;">
+              <span>Contact & Location Details</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand">
+          <img src="assets/logo/logo.svg" alt="Diamonds Pizza Bakers" width="220" height="44" />
+          <p class="footer-bio">
+            Authentic stone-baked pizzeria serving gourmet handcrafted pizzas, crispy burgers, pastas, street bites, and refreshing beverages in Rajgarh, Rajasthan.
+          </p>
+          <div class="footer-fssai-pill">
+            <span>🛡️</span>
+            <span>FSSAI Lic. No: 22224090005730</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Interactive Menu</a></li>
+            <li><a href="contact.html">Contact & Custom Orders</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Popular Menu Categories -->
+        <div>
+          <h4 class="footer-title">Menu Categories</h4>
+          <ul class="footer-links">
+            <li><a href="menu.html?category=pizza">Pizzas</a></li>
+            <li><a href="menu.html?category=burgers">Burgers</a></li>
+            <li><a href="menu.html?category=beverages">Beverages</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Official Contact Information -->
+        <div>
+          <h4 class="footer-title">Reach Us</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span>📍</span>
+              <span>PILANI MOAD, NEAR SONI HOSPITAL KE PASS, RAJGARH, CHURU, RAJASTHAN – 331023</span>
+            </li>
+            <li>
+              <span>📞</span>
+              <a href="tel:+917666351686">+91-7666351686</a>
+            </li>
+            <li>
+              <span>✉️</span>
+              <a href="mailto:DiamondsPizzaBakers@gmail.com">DiamondsPizzaBakers@gmail.com</a>
+            </li>
+            <li>
+              <span>🕒</span>
+              <span>Mon – Sun: 11:00 AM – 11:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar: Registrations & Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Diamonds Pizza Bakers. All rights reserved.</p>
+        <div class="footer-reg-details">
+          <span>BRN: 8004650013000049</span>
+          <span>UDYAM: UDYAM-RJ-11-0050968</span>
+          <span>FSSAI: 22224090005730</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/917666351686?text=Hello%20Diamonds%20Pizza%20Bakers!%20I%20would%20like%20to%20place%20an%20order." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-wa-btn" 
+     aria-label="Chat and Order on WhatsApp">
+    <div class="pulse-ring"></div>
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.18 8.18 0 01-5.82 2.41c-1.42 0-2.82-.37-4.06-1.07l-.29-.16-3.02.79.81-2.95-.19-.3a8.19 8.19 0 01-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.58.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29z"/>
+    </svg>
+  </a>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/menu-data.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
