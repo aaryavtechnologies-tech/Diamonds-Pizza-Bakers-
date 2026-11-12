@@ -54,23 +54,36 @@ function sendProductOrder({ productName, size, quantity, unitPrice, totalPrice }
 
 /**
  * Generates custom order WhatsApp message from contact/catering form
- * @param {Object} formData
+ * @param {Object} data
  */
-function sendCustomOrder(formData) {
+function sendCustomOrder(data) {
   const lines = [
-    "Hello Diamonds Pizza Bakers,",
-    "",
-    "I would like to enquire about a customised order / catering event:",
-    `- Customer Name: ${formData.customerName || "Customer"}`,
-    `- Phone: ${formData.phone || "Not specified"}`,
-    `- Event / Occasion: ${formData.eventOccasion || "Party / Gathering"}`,
-    `- Estimated Guests: ${formData.guestCount || "Not specified"}`,
-    `- Date Needed: ${formData.dateNeeded || "Flexible"}`,
-    `- Preferred Items: ${formData.selectedItems || "To be discussed"}`,
-    `- Additional Notes: ${formData.notes || "None"}`,
-    "",
-    "Please let me know availability and pricing."
+    "Hello Diamonds Pizza Bakers, I would like to place a custom order / enquiry:",
+    `- Customer Name: ${data.customerName || "Customer"}`,
+    `- Mobile Number: ${data.mobileNumber || data.phone || "Not specified"}`,
+    `- Food Item / Order: ${data.customOrder || data.selectedItems || "Custom Order"}`,
+    `- Customisation Details: ${data.details || data.notes || "Standard preparation"}`,
+    `- Quantity / People: ${data.quantity || data.guestCount || "1"}`
   ];
+
+  if (data.preferredSize && data.preferredSize.trim() !== "") {
+    lines.push(`- Preferred Size: ${data.preferredSize}`);
+  }
+  if (data.preferredDate && data.preferredDate.trim() !== "") {
+    lines.push(`- Preferred Date: ${data.preferredDate}`);
+  }
+  if (data.preferredTime && data.preferredTime.trim() !== "") {
+    lines.push(`- Preferred Time: ${data.preferredTime}`);
+  }
+  if (data.budget && data.budget.trim() !== "") {
+    lines.push(`- Estimated Budget: ${data.budget}`);
+  }
+  if (data.instructions && data.instructions.trim() !== "") {
+    lines.push(`- Additional Instructions: ${data.instructions}`);
+  }
+
+  lines.push("");
+  lines.push("Please confirm availability and details.");
 
   const message = lines.join("\n");
   const url = createWhatsAppUrl(message);
