@@ -861,11 +861,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   HOMEPAGE: LEADERSHIP INTRODUCTION STRIP
+   HOMEPAGE: LEADERSHIP INTRODUCTION STRIP (BOTH DIRECTORS)
    ========================================================================== */
 
 .home-leadership-section {
-  padding: 1rem 0 2.25rem;
+  padding: 1.25rem 0 2.5rem;
   background: var(--bg-dark);
 }
 
@@ -877,11 +877,11 @@ h1, h2, h3, h4, h5, h6 {
   );
   border: 1px solid rgba(229, 169, 59, 0.22);
   border-radius: var(--radius-xl);
-  padding: 1.35rem 2.25rem;
+  padding: 1.5rem 2.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.75rem;
+  gap: 2rem;
   box-shadow: 
     inset 0 1px 1px rgba(255, 255, 255, 0.08),
     0 8px 24px rgba(0, 0, 0, 0.4);
@@ -910,33 +910,11 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 10px rgba(229, 169, 59, 0.4);
 }
 
-.home-leadership-left {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.home-leadership-avatar {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(229, 169, 59, 0.22) 0%, rgba(20, 18, 14, 0.85) 100%);
-  border: 1.5px solid rgba(229, 169, 59, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-primary-light);
-  flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-}
-
-.home-leadership-details {
+.home-leadership-intro {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.2rem;
+  flex-shrink: 0;
 }
 
 .home-leadership-eyebrow {
@@ -947,30 +925,86 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-.home-leadership-name {
-  font-size: 1.22rem;
+.home-leadership-title {
+  font-size: 1.3rem;
   font-weight: 700;
   color: #FFFFFF;
   font-family: var(--font-heading);
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
-.home-leadership-designation {
-  font-size: 0.85rem;
-  color: #D1D5DB;
-  font-weight: 600;
-  display: inline-flex;
+.home-leadership-directors {
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 1.25rem;
+  flex-grow: 1;
+  justify-content: center;
 }
 
-.home-leadership-designation::before {
-  content: '•';
+.home-director-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.65rem 1.15rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.home-director-pill:hover {
+  background: rgba(229, 169, 59, 0.08);
+  border-color: rgba(229, 169, 59, 0.3);
+  transform: translateY(-2px);
+}
+
+.home-director-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(229, 169, 59, 0.2) 0%, rgba(20, 18, 14, 0.85) 100%);
+  border: 1.5px solid rgba(229, 169, 59, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+.home-director-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.home-director-designation {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.home-director-designation.designation-cd {
+  color: #E2E8F0;
+}
+
+.home-director-designation.designation-md {
   color: var(--color-primary);
 }
 
-.home-leadership-right {
+.home-director-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.2px;
+}
+
+.home-leadership-action {
   flex-shrink: 0;
 }
 
@@ -1004,6 +1038,143 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-leadership-link:hover .btn-arrow {
   transform: translateX(3px);
+}
+
+/* ==========================================================================
+   CONTACT PAGE: COMPACT LEADERSHIP CARD
+   ========================================================================== */
+
+.contact-leadership-card {
+  margin-top: 1.5rem;
+}
+
+.contact-leadership-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+.contact-leader-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.contact-leader-item:hover {
+  background: rgba(229, 169, 59, 0.06);
+  border-color: rgba(229, 169, 59, 0.25);
+  transform: translateX(2px);
+}
+
+.contact-leader-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(229, 169, 59, 0.2) 0%, rgba(20, 18, 14, 0.85) 100%);
+  border: 1.5px solid rgba(229, 169, 59, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  flex-shrink: 0;
+}
+
+.contact-leader-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.contact-leader-role {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #E2E8F0;
+}
+
+.contact-leader-role.role-md {
+  color: var(--color-primary);
+}
+
+.contact-leader-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   SHARED FOOTER: LEADERSHIP DETAILS
+   ========================================================================== */
+
+.footer-leadership-strip {
+  margin-top: 2.75rem;
+  padding: 1.15rem 1.75rem;
+  background: rgba(22, 20, 18, 0.75);
+  border: 1px solid rgba(229, 169, 59, 0.2);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.footer-leadership-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.footer-badge-icon {
+  font-size: 0.95rem;
+}
+
+.footer-leadership-directors {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-director-col {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.88rem;
+}
+
+.footer-director-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.footer-director-val {
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.footer-leadership-sep {
+  color: rgba(229, 169, 59, 0.35);
+  font-size: 1rem;
 }
 
 /* ==========================================================================
@@ -2752,8 +2923,23 @@ html, body {
   }
 
   .home-leadership-strip {
-    padding: 1.25rem 1.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.35rem 1.75rem;
     gap: 1.25rem;
+  }
+
+  .home-leadership-directors {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footer-leadership-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1.15rem 1.35rem;
   }
 }
 
@@ -3045,21 +3231,50 @@ html, body {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.25rem;
-    padding: 1.25rem 1.25rem;
+    padding: 1.35rem 1.25rem;
   }
 
-  .home-leadership-left {
+  .home-leadership-directors {
+    flex-direction: column;
+    align-items: stretch;
     width: 100%;
-    align-items: flex-start;
+    gap: 0.75rem;
   }
 
-  .home-leadership-right {
+  .home-director-pill {
+    width: 100%;
+  }
+
+  .home-leadership-action {
     width: 100%;
   }
 
   .btn-leadership-link {
     width: 100%;
     justify-content: center;
+  }
+
+  .footer-leadership-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.15rem 1.15rem;
+    gap: 0.85rem;
+  }
+
+  .footer-leadership-directors {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .footer-director-col {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-leadership-sep {
+    display: none;
   }
 
   .contact-layout-grid {
