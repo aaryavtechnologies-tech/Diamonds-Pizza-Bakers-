@@ -1,6 +1,6 @@
 /**
  * Diamonds Pizza Bakers - Interactive Menu Component
- * Renders all 30 products, supports dynamic category filtering, search,
+ * Renders all 33 products, supports dynamic category filtering, search,
  * live portion size selection, quantity adjustment, real-time price calculation,
  * and direct WhatsApp ordering.
  */
@@ -58,7 +58,7 @@ function initMenu() {
     });
   }
 
-  // Initial render: All 30 items
+  // Initial render: All 33 items
   renderProducts(menuGrid, activeCategory, activeSearch);
 }
 
@@ -67,9 +67,16 @@ function initMenu() {
  */
 function renderCategoryFilters(container, activeCategory, onSelect) {
   const categories = getMenuCategories();
+  const items = getMenuItems();
   if (!container || categories.length === 0) return;
 
-  container.innerHTML = categories.map((cat) => {
+  // Filter out any unused categories that contain 0 approved products
+  const activeCategories = categories.filter((cat) => {
+    if (cat.id === "all") return items.length > 0;
+    return items.some((item) => item.category === cat.id);
+  });
+
+  container.innerHTML = activeCategories.map((cat) => {
     const isActive = cat.id === activeCategory ? "active" : "";
     return `
       <button type="button" class="category-pill ${isActive}" data-category="${cat.id}">
@@ -122,7 +129,7 @@ function renderProducts(grid, category, search) {
         <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">No menu items found</h3>
         <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Try selecting another category or clear your search term.</p>
         <button type="button" class="btn btn-secondary" id="reset-filters-btn">
-          Show All 30 Items
+          Show All 33 Items
         </button>
       </div>
     `;
@@ -189,6 +196,7 @@ function createProductCardHtml(item) {
   }
 
   const badgeHtml = item.badge ? `<span class="product-badge">${item.badge}</span>` : "";
+  const pendingBadgeHtml = item.photoPending ? `<span class="photo-pending-badge">Photo Pending</span>` : "";
 
   return `
     <article class="product-card" id="card-${item.id}" data-product-id="${item.id}">
@@ -198,9 +206,10 @@ function createProductCardHtml(item) {
           alt="${item.name} - Diamonds Pizza Bakers" 
           class="product-image"
           loading="lazy"
-          onerror="this.onerror=null; this.src='assets/images/categories/cat-pizza.jpg';"
+          onerror="this.onerror=null; this.src='assets/images/menu/photo-pending.jpg';"
         />
         ${badgeHtml}
+        ${pendingBadgeHtml}
         <span class="product-category-tag">${item.categoryLabel || item.category}</span>
       </div>
 
